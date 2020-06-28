@@ -1,0 +1,13 @@
+﻿@model List<Student>
+
+@if(Model != null && Model.Any())
+{
+    <ul>
+        <li style="font-weight: bold;"> # | Name | Email</li>
+        @foreach (var student in Model)
+        {
+            <li> @student.Id | @student.FullName | @student.Email</li>
+        }
+    </ul>
+}
+
